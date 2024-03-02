@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+	<title>Document</title>
+</head>
+
+<body>
+
+	<table class="table table-bordered border-primary">
+		<thead>
+			<tr>
+				<th>
+					<label class="fw-bold">cedula del estudiante: </label>
+				</th>
+				<th>
+					<label class="fw-bold">materia: </label>
+				</th>
+				<th>
+					<label class="fw-bold">cedula profesor: </label>
+				</th>
+				<th>
+					<label class="fw-bold">nombre del hilo: </label>
+				</th>
+			</tr>
+		</thead>
+
+		<hbody>
+			<tr th:each="matricula:${reporteMatriculas}">
+				<td th:text="${matricula.cedulaEstudiante}"></td>
+				<td th:text="${matricula.NombreMateria}"></td>
+				<td th:text="${matricula.nombreHilo}"></td>
+				<td th:text="${matricula.cedulaProfesor}"></td>
+			</tr>
+		</hbody>
+	</table>
+
+</body>
+
+</html>
